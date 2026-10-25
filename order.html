@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สั่งซื้อสินค้า | Body Scent</title>
+  <meta name="description" content="กรอกข้อมูลเพื่อสั่งซื้อน้ำหอมฉีดตัวและโรลออน Body Scent">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav">
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="product.html">สินค้า</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section--page">
+      <div class="container">
+
+        <div class="section-head">
+          <h1>สั่งซื้อสินค้า</h1>
+          <hr class="gold-rule">
+          <p>ตรวจสอบรายการและยอดเงินให้ถูกต้อง แล้วกรอกข้อมูลสำหรับติดต่อกลับ</p>
+        </div>
+
+        <form id="orderForm" class="form">
+
+          <div class="field">
+            <label for="customerName">ชื่อลูกค้า</label>
+            <input type="text" id="customerName" name="customerName" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="contact">เบอร์โทร / Line</label>
+            <input type="text" id="contact" name="contact" required>
+          </div>
+
+          <div class="field">
+            <label for="items">รายการสินค้า</label>
+            <textarea id="items" name="items" class="field-short" required></textarea>
+            <p class="field-hint">หากต้องการสั่งหลายรายการ พิมพ์เพิ่มในช่องนี้ แล้วแก้จำนวนเงินรวมให้ตรงกัน</p>
+          </div>
+
+          <div class="field">
+            <label for="total">จำนวนเงินรวม (บาท)</label>
+            <input type="number" id="total" name="total" min="0" step="any" inputmode="decimal" required>
+          </div>
+
+          <div class="field">
+            <label for="note">หมายเหตุ (ไม่บังคับ)</label>
+            <textarea id="note" name="note"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--solid btn--block">ยืนยันสั่งซื้อ</button>
+
+        </form>
+
+        <p class="form-footer"><a class="link-quiet" href="product.html">กลับไปเลือกสินค้า</a></p>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="brand" href="index.html">Body Scent</a>
+      <p>&copy; 2026 Body Scent</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
